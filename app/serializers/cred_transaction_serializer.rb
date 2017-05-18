@@ -10,6 +10,6 @@ class CredTransactionSerializer < ActiveModel::Serializer
   end
 
   def timestamp
-    object.created_at.strftime "%l:%M%p %m/%d/%Y"
+    object.created_at
   end
 end

@@ -1,6 +1,7 @@
 class ReposController < ApplicationController
   def index
-    render json: { repos: serialized_repos }
+    result = FetchReposWithIssues.call
+    render json: { repos: result.repos }
   end
 
   private

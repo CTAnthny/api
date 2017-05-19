@@ -2,7 +2,13 @@ class FetchReposWithIssues
   include Interactor
 
   def call
-    context.repos = repos_with_issues.map(&:full_name)
+    context.repos = repos_with_issues.map do |repo|
+      {
+        name:              repo.name,
+        path:              repo.full_name,
+        open_issues_count: repo.open_issues_count
+      }
+    end
   end
 
   private

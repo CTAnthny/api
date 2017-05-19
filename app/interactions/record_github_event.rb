@@ -14,7 +14,7 @@ class RecordGithubEvent
   end
 
   def user
-    context.user ||= User.find_by(github_handle: user_that_opened_pull_request)
+    context.user ||= User.find_by("lower(github_handle) = ?", user_that_opened_pull_request&.downcase)
   end
 
   def user_that_opened_pull_request

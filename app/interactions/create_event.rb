@@ -32,9 +32,9 @@ class CreateEvent
 
   def transaction
     context.transaction ||= CredTransaction.new(
-      user_id:  event.user_id,
-      event_id: event.id,
-      delta:    delta
+      user_id:    event.user_id,
+      event_id:   event.id,
+      delta:      delta
     )
   end
 

@@ -1,5 +1,5 @@
 class CredTransactionSerializer < ActiveModel::Serializer
-  attributes :id, :delta, :delta_type, :timestamp, :action
+  attributes :id, :delta, :delta_type, :timestamp, :action,
 
   def delta_type
     object.delta.positive? ? "positive" : "negative"

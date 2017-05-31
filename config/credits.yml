@@ -27,3 +27,8 @@
   points_per_unit: 50.0
   title: "Get a Pull Request merged on GitHub"
   description: "Open a Pull Request that references an open issue and get it merged"
+
+- name: "attended_meetup"
+  points_per_unit: 35.0
+  title: "Attend a CLTJRDEVS meetup"
+  description: ""
